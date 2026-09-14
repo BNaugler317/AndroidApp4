@@ -1,5 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
+    //alias(libs.plugins.kotlin.android)
+    //id("org.jetbrains.kotlin.kapt")
+    // alias(libs.plugin.kotlin.android)
+    // alias(libs.plugins.ksp)
+    // id("com.android.application")
+    // alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -37,6 +44,27 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.core.ktx)
     implementation(libs.material)
+
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+
+    // Glide
+    implementation(libs.glide)
+    //kapt(libs.glide.compiler)
+    ksp(libs.glide.ksp)
+
+    // Gson
+    implementation(libs.gson)
+
+    //RecyclerView
+    implementation(libs.recyclerview)
+
+    // Lifecycle ViewModel
+    implementation(libs.lifecycle.viewmodel)
+
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
